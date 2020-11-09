@@ -26,6 +26,8 @@ class Home extends Component {
             nameInput: '',
             descInput: '',
             currRow: {},
+            currName: '',
+            currDesc: '',
             isModalOpen: false
         };
 
@@ -34,6 +36,8 @@ class Home extends Component {
         this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleDescChange = this.handleDescChange.bind(this);
+        this.handleModalName = this.handleModalName.bind(this);
+        this.handleModalDesc = this.handleModalDesc.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
      
@@ -46,6 +50,8 @@ class Home extends Component {
     handleModal(event){
         this.setState({
             currRow: event.target.id,
+            currName: event.target.name,
+            currDesc: event.target.title,
             isModalOpen: !this.state.isModalOpen
         });
     }
@@ -68,6 +74,14 @@ class Home extends Component {
     handleDescChange(event) {
         this.setState({descInput: event.target.value});
       }
+
+    handleModalName(event){
+        this.setState({currName: event.target.value});
+    }
+
+    handleModalDesc(event){
+        this.setState({currDesc: event.target.value});
+    }
 
 
     handleSubmit(values){
@@ -95,7 +109,7 @@ class Home extends Component {
                         <ButtonGroup>
                             <Button name='delete' color="danger" onClick={() => {this.handleDelete(row._id)}}>Delete</Button>
                             
-                            <Button id={row._id} onClick={this.handleModal} >Update Row</Button>
+                            <Button id={row._id} name={row.name} title={row.description} onClick={this.handleModal} >Update Row</Button>
 
                         </ButtonGroup>
                     </td>
@@ -125,15 +139,15 @@ class Home extends Component {
                                         <Label htmlFor="name">Name</Label>
                                         <Row className="form-group">
                                             <Col md={12}>
-                                                <Control.text model=".name" id="name" name="name" placeholder="New Name"
+                                                <Control.text onChange={this.handleModalName} model=".name" id="name" name="name" value={this.state.currName}
                                                 className="form-control" />
                                             </Col>
                                         </Row>
                                         <Label htmlFor="description">description</Label>
                                         <Row className="form-group">
                                             <Col>
-                                                <Control.textarea model=".description" id="description" name="description" 
-                                                rows="6"  placeholder="New Description"
+                                                <Control.textarea onChange={this.handleModalDesc} model=".description" id="description" name="description" 
+                                                rows="6"  value={this.state.currDesc}
                                                 className="form-control"/>
                                                     
                                             </Col>
