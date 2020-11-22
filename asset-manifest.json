@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CrudTable/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/CrudTable/static/js/main.645a55dc.chunk.js",
+    "main.js.map": "/CrudTable/static/js/main.645a55dc.chunk.js.map",
+    "runtime-main.js": "/CrudTable/static/js/runtime-main.8ad85c81.js",
+    "runtime-main.js.map": "/CrudTable/static/js/runtime-main.8ad85c81.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/CrudTable/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.38fa505b.chunk.js": "/CrudTable/static/js/2.38fa505b.chunk.js",
+    "static/js/2.38fa505b.chunk.js.map": "/CrudTable/static/js/2.38fa505b.chunk.js.map",
+    "static/js/3.ffa16c4b.chunk.js": "/CrudTable/static/js/3.ffa16c4b.chunk.js",
+    "static/js/3.ffa16c4b.chunk.js.map": "/CrudTable/static/js/3.ffa16c4b.chunk.js.map",
+    "index.html": "/CrudTable/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/CrudTable/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.ab7136cd.chunk.css.map": "/CrudTable/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.38fa505b.chunk.js.LICENSE.txt": "/CrudTable/static/js/2.38fa505b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ad85c81.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.38fa505b.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.645a55dc.chunk.js"
+  ]
+}
